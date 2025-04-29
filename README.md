@@ -16,11 +16,11 @@ This dataset is in CSV (comma-separated values) format, where each line represen
 
 Key attributes relevant to our analysis include:
 
-*Event_ID:* A unique identifier for each incident
+**Event_ID:** A unique identifier for each incident
 
 Make and Model: Manufacturer and model of the aircraft involved
 
-Number of Fatalities: Critical for assessing severity and safety
+# Number of Fatalities: Critical for assessing severity and safety
 
 Number of Minor Injuries: Helps gauge less severe but frequent incidents
 
