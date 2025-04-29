@@ -24,15 +24,11 @@ Key attributes relevant to our analysis include:
 
       Number of Minor Injuries: Helps gauge less severe but frequent incidents
 
-Other operational and environmental factors where available
+Other operational and environmental factors where available to ensure data integrity and relevance, the following preprocessing steps will be taken:
 
-To ensure data integrity and relevance, the following preprocessing steps will be taken:
-
-Columns with excessive missing values and little analytical value will be removed
-
-For essential fields with limited missing entries, the affected rows will be excluded
-
-Data types will be standardized, and inconsistencies (such as duplicates or formatting errors) will be resolved
+      Columns with excessive missing values and little analytical value will be removed.
+      For essential fields with limited missing entries, the affected rows will be excluded.
+      Data types will be standardized, and inconsistencies (such as duplicates or formatting errors) will be resolved.
 
 This dataset is highly relevant to the project’s objectives, as it enables a historical and statistical evaluation of aircraft safety and performance. By analyzing trends in incident frequency, severity, and aircraft types involved, we can generate meaningful insights to support risk-aware aircraft acquisition decisions.
 
@@ -67,8 +63,9 @@ Based on the analysis conducted, the management will carefully consider the reco
 
 ### Contacts
 Project Presented By:
-Newton Muhato.
-Data Analyst & Aviation Risk Consultant.
+
+      Newton Muhato.
+      Data Analyst & Aviation Risk Consultant.
 
 For further inquiries or to discuss the project in more detail, feel free to reach out:
 📧 newton.njeri@student.moringa.com
