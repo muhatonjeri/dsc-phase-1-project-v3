@@ -7,58 +7,83 @@ import csv
 ```
 # ASSESSING POTENTIAL RISKS OF AIRCRAFT FOR FLEET ACQUISITION
 
-## PROJECT OVERVIEW
-It is our company's wish to expand to new industries to diversify its portfolio. The company is interested in purchasing and operating airplanes for commercial and private enterprises. The goal of this project is to find the aircraft with the lowest risk for both commercial and private operations. This project is focused on analyzing available aircraft data, assessing risks, and delivering clear, actionable recommendations to guide the head of the new aviation division to make purchasing decisions.
+# PROJECT OVERVIEW
+As part of a strategic initiative to diversify its portfolio, our company is exploring entry into the aviation sector through the acquisition and operation of aircraft for both commercial and private use. This project seeks to identify aircraft models that offer the lowest operational and safety risks, thereby supporting long-term reliability and cost efficiency. Through comprehensive analysis of industry data—including performance metrics, safety records, and maintenance histories—we aim to provide actionable insights and clear recommendations. These findings will equip the aviation division with the critical information needed to make informed, risk-conscious purchasing decisions.
 
-## BUSINESS UNDERSTANDING
+# BUSINESS UNDERSTANDING
+Investing in aircraft represents a substantial commitment with far-reaching implications for operational continuity, safety, and financial sustainability. Inaccurate or poorly informed decisions in aircraft selection can result in elevated maintenance costs, increased safety risks, regulatory issues, and diminished customer trust.
 
-A company's decision to diversify and acquire aircraft is a major investment that impacts operational efficiency, safety, maintenance costs, and profitability for years to come. Choosing aircraft without a clear assessment of potential risks can lead to significant financial losses and operational disruptions.
+This project addresses these concerns by conducting a data-driven evaluation of aircraft risk profiles. Key assessment areas will include incident and accident history, mechanical reliability, safety performance, and long-term operational support. By identifying aircraft with consistently strong performance and low risk, the company can safeguard its investment, optimize fleet operations, and establish a solid foundation for success in the aviation sector.
 
-The objective of this project is to systematically assess and evaluate the potential risks associated with various aircraft models under consideration for fleet acquisition. This involves analyzing historical performance data, safety incident records, accident frequency, fatality cases and other relevant factors.
 
-By identifying aircraft with lower risk profiles, the head of aviation division can make more informed acquisition decisions, leading to increased operational reliability, reduced maintenance expenses, enhanced passenger satisfaction, and long-term financial savings.
 
-## DATA UNDERSTANDING AND ANALYSIS
+# DATA UNDERSTANDING AND ANALYSIS
+The dataset utilized for this project is sourced from the Kaggle Aviation Accident Database Synopses, originally compiled by the National Transportation Safety Board (NTSB). It provides detailed records of civil aviation accidents and selected incidents occurring in the United States and international waters, covering the period from 1962 through 2023.
 
-The data for this project is a dataset found at (https://www.kaggle.com/datasets/khsamaha/aviation-accident-database-synopses) from the National Transportation Safety Board that includes aviation accident data from 1962 to 2023 about civil aviation accidents and selected incidents in the United States and international waters.
+This dataset is in CSV (comma-separated values) format, where each line represents a unique incident or accident, and the first row defines the column headers. It contains 90,348 records across 31 columns. While the dataset is rich in information, it includes a significant amount of missing data, which necessitates careful preprocessing before analysis.
 
-The data is of comma separated values format. This means that the data is in form of a table but separated by commas, such that the first row represents the columns titles or headers of the data and each row or line is an observation.  
+Key attributes relevant to our analysis include:
 
-The data has 90,348 rows and 31 columns. There are columns with missing data. The important values of the data that is going to be used in analysing include: Event.id, Make and model of aircraft, number of fatalities, number of minor injuries among others.
+Event_ID: A unique identifier for each incident
 
-I will need to do preprocessing of this data before use because it has significant missing values. I am going to drop the columns which have great number of missing values. For those columns essential for the project but have missing values, I will drop the rows with missing data.
+Make and Model: Manufacturer and model of the aircraft involved
 
-The data is relevant for the project because it has all that we require to analyze and come up with a decision on which aircrafts to acquire and which ones to avoid.
+Number of Fatalities: Critical for assessing severity and safety
+
+Number of Minor Injuries: Helps gauge less severe but frequent incidents
+
+Other operational and environmental factors where available
+
+To ensure data integrity and relevance, the following preprocessing steps will be taken:
+
+Columns with excessive missing values and little analytical value will be removed
+
+For essential fields with limited missing entries, the affected rows will be excluded
+
+Data types will be standardized, and inconsistencies (such as duplicates or formatting errors) will be resolved
+
+This dataset is highly relevant to the project’s objectives, as it enables a historical and statistical evaluation of aircraft safety and performance. By analyzing trends in incident frequency, severity, and aircraft types involved, we can generate meaningful insights to support risk-aware aircraft acquisition decisions.
 
 ## Visualizations
-1. Unsafe aircrafts - This is based on the number of accidents and total fatalities. I advise the Head of the Aviation Division to avoid the aircrafts from this section. 
+1.Total Fatal Injuries per Year
+ Here's a professional write-up for the Total Fatal Injuries per Year section, which explains the plot of fatal injuries over time:
+![alt text](image-4.png)
 
-![image](https://github.com/user-attachments/assets/f6774fb7-37c4-451c-bde0-ff2a76418542)
-
-
-
-2. Top ten safest aircrafts - as per the number of accidents and fatalities
-
-![image](https://github.com/user-attachments/assets/349f854f-f3a8-4511-97b8-7f015514b9bd)
+2.Top 10 Locations by Number of Aviation Incidents
+This analysis identifies the geographical areas with the highest concentration of reported aviation incidents based on the dataset. By aggregating incident counts by location, we were able to highlight hotspots where aviation-related events occur more frequently.
+![alt text](image-3.png)
 
 
-3. Accidents by flight phase. - This shows the phase at which accidents occur. Since there were many missing data on this and I decided to fill them with *unknown* from the pie chart we can see that most accidents occur at an unknown phase. The second phase is the landing followed by the take-off phase. I recommend the management to consider more training on this once they make the acquisition.
+ 3.Accidents by Flight Phase
+This analysis highlights the distribution of aviation accidents across different phases of flight. Due to a significant number of missing entries in the "flight phase" column, these gaps were addressed by assigning the label Unknown to ensure completeness of the analysis.
+Given these insights, it is recommended that, upon aircraft acquisition, the company invests in enhanced pilot training and operational protocols specifically focused on take-off and landing procedures. This targeted approach can significantly reduce risk exposure during the most accident-prone phases of flight.
+![alt text](image-2.png)
 
-![image](https://github.com/user-attachments/assets/6d8825eb-a2b2-4690-bd1a-633832388b50)
-
- 4. INTERACTIVE DASHBOARD
-You can view the full interactive Tableau dashboard [here](https://public.tableau.com/app/profile/pacificah.asamba/viz/phase1project_17458709780720/Dashboard1?publish=yes).
+ 4.Interactive Dashboard Access
+To explore the findings in greater detail, the full interactive Tableau dashboard is available for review. The dashboard provides a comprehensive visualization of aviation accident trends, aircraft-specific incident frequencies, flight phase risk distribution, and other key insights derived from the dataset.[here]https://public.tableau.com/views/PHASE1PROJECT_17459315721160/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 
 
 ## CONCLUSION
 
-The management will consider the recemmendations given. There is room for farther analysis since due to time constraint, I did not manage to look at other key factors like Number of engines among others.
+Based on the analysis conducted, the management will carefully consider the recommendations provided regarding aircraft acquisition, with a focus on safety, risk mitigation, and operational efficiency. The findings indicate critical insights into accident trends, aircraft-specific performance, and risk factors across different flight phases. These will be instrumental in shaping future decisions for fleet development.
 
 
 ### Contacts
-Project done by: Pacificah Asamba. Reach out on [pacificah.asamba@student.moringa.com](https://www.google.com/support/accounts/bin/answer.py?answer=181692) 
+Project Presented By:
+Newton Muhato
+Data Analyst & Aviation Risk Consultant
+
+For further inquiries or to discuss the project in more detail, feel free to reach out:
+📧 newton.njeri@student.moringa.com
+
 
 
 ### Acknowlegement
-Thanks to my Technical Mentors: MaryAnn Mwikali, Samwel G and George Kamundia. Special shout out to Samwel Jane for setting the pace right.
+I would like to extend my heartfelt thanks to my Technical Mentors:
+
+MaryAnn Mwikali
+
+Samwel G
+
+Your unwavering support and expert advice have been instrumental in shaping the success of this analysis. I am truly grateful for the guidance and insights you've provided throughout this project.
